@@ -38,7 +38,7 @@ export class DetailComponent {
         //     this.product = data;
         // })
         console.log(this.form.value);
-        this.onClickEdit = !this.onClickEdit;
+        // this.onClickEdit = !this.onClickEdit;
         
     }
 
