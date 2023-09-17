@@ -1,0 +1,25 @@
+
+<div class="table">
+    <p>Product details</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Product ID</th>
+          <th>Product Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let prd of product">
+          <td>{{prd.productID}}</td>
+          <td>
+            <div *ngIf="!onClickEdit">{{prd.productName}}</div>
+            <div *ngIf="onClickEdit" class="form-group">
+                <input type="text" class="form-control" value={{prd.productName}}>
+              </div>
+            </td>
+          <td><button (click)="onEdit(prd.productID)">Edit</button></td>
+          <td><button (click)="onDelete(prd.productID)">Delete</button></td>          
+        </tr>
+      </tbody>
+    </table>
+  </div>
